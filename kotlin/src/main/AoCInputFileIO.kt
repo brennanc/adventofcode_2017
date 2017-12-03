@@ -1,5 +1,7 @@
 package main
 
+import java.io.File
+import java.io.FileInputStream
 import java.io.InputStream
 import java.util.*
 
@@ -17,4 +19,9 @@ object AoCInputFileIO {
         return txt
     }
 
+    public fun readFileAsStrings(fname : String) : List<String> {
+        val filePath = javaClass.classLoader.getResource(INPUT_FILE_ROOT+fname+".txt").path
+        return File(filePath).readLines()
+    }
 }
+
