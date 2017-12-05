@@ -16,4 +16,9 @@ class Day4 {
         return inputs.map { noDuplicateWordPassphrase(it) }
                 .filter{ it }.size
     }
+
+    fun getAnagrams(str : String) : List<String> {
+        str.asIterable()
+        return listOf("")
+    }
 }
